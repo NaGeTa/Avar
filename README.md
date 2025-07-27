@@ -1,0 +1,2 @@
+# Avar
+Language "Avar"
