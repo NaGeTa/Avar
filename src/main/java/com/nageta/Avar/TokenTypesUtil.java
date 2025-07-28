@@ -1,11 +1,8 @@
 package com.nageta.Avar;
 
-import lombok.Getter;
-
 import java.util.Map;
 
 public class TokenTypesUtil {
-    @Getter
     public static final Map<String, TokenType> tokenTypes;
 
     static {
@@ -21,5 +18,9 @@ public class TokenTypesUtil {
                 Map.entry("LPAR", new TokenType("LPAR", "\\(")),
                 Map.entry("RPAR", new TokenType("RPAR", "\\)"))
         );
+    }
+
+    public static Map<String, TokenType> getTokenTypes() {
+        return tokenTypes;
     }
 }
