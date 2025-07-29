@@ -1,9 +1,12 @@
 package com.nageta.Avar;
 
+import lombok.Getter;
+
 import java.util.Map;
 
 public class TokenTypesUtil {
-    public static final Map<String, TokenType> tokenTypes;
+    @Getter
+    private static final Map<String, TokenType> tokenTypes;
 
     static {
         tokenTypes = Map.ofEntries(
@@ -13,14 +16,10 @@ public class TokenTypesUtil {
                 Map.entry("SPACE", new TokenType("SPACE", "[ \\n\\t\\r]*")),
                 Map.entry("ASSIGN", new TokenType("ASSIGN", "=")),
                 Map.entry("LOG", new TokenType("LOG", "БИХЬЕ")),
-                Map.entry("PLUS", new TokenType("PLUS", "+")),
-                Map.entry("MINUS", new TokenType("MINUS", "-")),
+                Map.entry("PLUS", new TokenType("PLUS", "\\+")),
+                Map.entry("MINUS", new TokenType("MINUS", "\\-")),
                 Map.entry("LPAR", new TokenType("LPAR", "\\(")),
                 Map.entry("RPAR", new TokenType("RPAR", "\\)"))
         );
-    }
-
-    public static Map<String, TokenType> getTokenTypes() {
-        return tokenTypes;
     }
 }

@@ -1,5 +1,10 @@
 package com.nageta.Avar;
 
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
 public final class Token {
     private final TokenType type;
     private final String text;
@@ -9,17 +14,5 @@ public final class Token {
         this.type = type;
         this.text = text;
         this.position = position;
-    }
-
-    public TokenType getType() {
-        return this.type;
-    }
-
-    public String getText() {
-        return this.text;
-    }
-
-    public Integer getPosition() {
-        return this.position;
     }
 }
