@@ -43,6 +43,7 @@ public class Lexer {
                 return true;
             }
         }
+//        TODO: вывод ошибки в виде номера строки и символа
         throw new Error("Error on " + this.position + " position");
     }
 }
