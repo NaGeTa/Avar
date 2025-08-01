@@ -10,16 +10,16 @@ public class TokenTypesUtil {
 
     static {
         tokenTypes = Map.ofEntries(
-                Map.entry("NUMBER", new TokenType("NUMBER", "[0-9]*")),
-                Map.entry("VARIABLE", new TokenType("VARIABLE", "[a-zа-я]*")),
-                Map.entry("SEMICOLON", new TokenType("SEMICOLON", ";")),
-                Map.entry("SPACE", new TokenType("SPACE", "[ \\n\\t\\r]*")),
-                Map.entry("ASSIGN", new TokenType("ASSIGN", "=")),
-                Map.entry("LOG", new TokenType("LOG", "БИХЬЕ")),
-                Map.entry("PLUS", new TokenType("PLUS", "\\+")),
-                Map.entry("MINUS", new TokenType("MINUS", "\\-")),
-                Map.entry("LPAR", new TokenType("LPAR", "\\(")),
-                Map.entry("RPAR", new TokenType("RPAR", "\\)"))
+                Map.entry("NUMBER", new TokenType(TokenNamesEnum.NUMBER, "[0-9]*")),
+                Map.entry("VARIABLE", new TokenType(TokenNamesEnum.VARIABLE, "[a-zа-я]*")),
+                Map.entry("SEMICOLON", new TokenType(TokenNamesEnum.SEMICOLON, ";")),
+                Map.entry("SPACE", new TokenType(TokenNamesEnum.SPACE, "[ \\n\\t\\r]*")),
+                Map.entry("ASSIGN", new TokenType(TokenNamesEnum.ASSIGN, "=")),
+                Map.entry("LOG", new TokenType(TokenNamesEnum.LOG, "БИХЬЕ")),
+                Map.entry("PLUS", new TokenType(TokenNamesEnum.PLUS, "\\+")),
+                Map.entry("MINUS", new TokenType(TokenNamesEnum.MINUS, "\\-")),
+                Map.entry("LPAR", new TokenType(TokenNamesEnum.LPAR, "\\(")),
+                Map.entry("RPAR", new TokenType(TokenNamesEnum.RPAR, "\\)"))
         );
     }
 }
