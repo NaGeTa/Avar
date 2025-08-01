@@ -18,10 +18,11 @@ public class Lexer {
     }
 
     List<Token> analys() {
-        while (nextToken()) {
-
-        }
-        return tokens;
+        while (nextToken()) {}
+//        need new variable?
+        return tokens.stream()
+                .filter(token -> !token.getType().getName().equals(TokenNamesEnum.SPACE))
+                .toList();
     }
 
     private boolean nextToken() {
@@ -39,11 +40,20 @@ public class Lexer {
                 Token token = new Token(tokenType, word, this.position);
                 this.position += word.length();
                 this.tokens.add(token);
-                System.out.println(word);
                 return true;
             }
         }
-//        TODO: вывод ошибки в виде номера строки и символа
         throw new Error("Error on " + this.position + " position");
+    }
+
+//    TODO: сделать нормально
+    private int countLines(String code) {
+        Pattern pattern = Pattern.compile("\\n");
+        Matcher matcher = pattern.matcher(code);
+        int count = 0;
+        while (matcher.find()) {
+            count++;
+        }
+        return count;
     }
 }
