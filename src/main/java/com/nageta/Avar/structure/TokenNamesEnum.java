@@ -1,4 +1,4 @@
-package com.nageta.Avar;
+package com.nageta.Avar.structure;
 
 
 public enum TokenNamesEnum {

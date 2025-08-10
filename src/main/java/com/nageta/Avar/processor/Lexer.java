@@ -1,4 +1,9 @@
-package com.nageta.Avar;
+package com.nageta.Avar.processor;
+
+import com.nageta.Avar.structure.Token;
+import com.nageta.Avar.structure.TokenNamesEnum;
+import com.nageta.Avar.structure.TokenType;
+import com.nageta.Avar.util.TokenTypesUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +22,7 @@ public class Lexer {
         this.tokens = new ArrayList<>();
     }
 
-    List<Token> analys() {
+    public List<Token> analys() {
         while (nextToken()) {}
 //        need new variable?
         return tokens.stream()

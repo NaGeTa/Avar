@@ -1,4 +1,4 @@
-package com.nageta.Avar;
+package com.nageta.Avar.structure;
 
 import lombok.Getter;
 import lombok.ToString;

@@ -1,5 +1,7 @@
-package com.nageta.Avar;
+package com.nageta.Avar.util;
 
+import com.nageta.Avar.structure.TokenNamesEnum;
+import com.nageta.Avar.structure.TokenType;
 import lombok.Getter;
 
 import java.util.Map;
